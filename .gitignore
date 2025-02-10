@@ -1,0 +1,26 @@
+# Ignorar entornos virtuales
+venv/
+env/
+
+# Ignorar archivos temporales de Python
+*.pyc
+__pycache__/
+
+# Ignorar datasets grandes (si no quieres subirlos)
+data/raw/
+data/processed/
+
+# Ignorar configuraciones locales del sistema operativo
+.DS_Store  # Para MacOS
+Thumbs.db  # Para Windows
+
+# Ignorar configuraciones del editor/IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de log y temporales
+*.log
+*.tmp
+
+# Ignorar archivos específicos de Jupyter Notebooks
+.ipynb_checkpoints/
