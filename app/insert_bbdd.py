@@ -76,10 +76,10 @@ try:
             print(f"✅ Datos insertados correctamente en la tabla {table}.")
         except Exception as e:
             conn.rollback()
-            print(f"❌ ERROR al insertar en {table}: {e}")
+            raise ValueError(f"❌ ERROR al insertar en {table}: {e}")
             raise
 except Exception as general_error:
-    print(f"❌ ERROR GENERAL: {general_error}")
+    raise ValueError(f"❌ ERROR GENERAL: {general_error}")
 
 finally:
     # Cerrar cursor y conexión para liberar recursos
