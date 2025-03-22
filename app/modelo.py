@@ -71,14 +71,20 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import mean_squared_error
 import numpy as np
 
+
+
 # 1️⃣ Features y target
 X = df.drop(columns=['transacciones', 'fecha'])
 y = df['transacciones']
 
 # 2️⃣ Encoding simple para categóricas
+
+encoders ={}
+
 for col in X.select_dtypes(include='object').columns:
     le = LabelEncoder()
     X[col] = le.fit_transform(X[col].astype(str))
+    encoders[col] = le # Guardamos los encoders en un diccionario
 
 # 3️⃣ Crear Random Forest
 rf_model = RandomForestRegressor(
@@ -108,4 +114,9 @@ base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 models_dir = os.path.join(base_dir, 'models')
 
 # Guardar modelo entrenado
-joblib.dump(rf_model, os.path.join(models_dir, 'random_forest_model.pkl'))
+joblib.dump({
+    'model': rf_model,
+    'encoders': encoders
+}, os.path.join(models_dir, 'random_forest_model.pkl'))
+
+print("✅ Modelo y encoders guardados.")
