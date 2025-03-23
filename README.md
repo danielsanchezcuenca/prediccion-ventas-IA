@@ -46,4 +46,4 @@ Este proyecto desarrolla un **pipeline completo de ciencia de datos** para prede
 
 Soy un profesional orientado a resultados, con experiencia técnica y enfoque claro hacia soluciones que aportan valor. Este proyecto refleja mi capacidad para diseñar, construir y automatizar pipelines completos.
 
-**Contacto:** [LinkedIn](https://linkedin.com/in/tu_usuario) | [Email](mailto:tu_email@example.com)
+**Contacto:** [LinkedIn](https://www.linkedin.com/in/daniel-s%C3%A1nchez-cuenca-367522286/) | [Email](sanchezcuencadaniel@gmail.com)
